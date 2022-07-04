@@ -2,23 +2,24 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(
-    cors({
-      origin: ["http://127.0.0.1:800"],
-      credentials: true,
-    })
-  );
+  cors({
+    origin: ["http://localhost:800"],
+  })
+);
 
 app.get("/", (req, res) => {
-  res.send("main");
+  res.send("hello world");
 });
 
-app.get("/signup", (req, res) => {
-  res.send("회원가입");
+app.post("/signup", (req, res) => {
+
 });
 
-app.get("/login", (req, res) => {
-  res.send("로그인");
+app.post("/login", (req, res) => {
+
 });
 
 app.listen(3000, () => {

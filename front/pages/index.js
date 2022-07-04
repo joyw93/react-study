@@ -15,8 +15,8 @@ const Home = () => {
     setPassword(e.target.value);
   };
 
-  const onSubmit = () => {
-    axios.get("http://127.0.0.1:3000")
+  const onSubmit =  () => {
+    
   };
 
   return (
@@ -33,7 +33,7 @@ const Home = () => {
           <Input type="password" value={password} onChange={onChangePassword} />
         </div>
         <div>
-          <Button htmlType="submit">로그인</Button>
+          <Button htmlType="submit">회원가입</Button>
         </div>
       </Form>
     </AppLayout>
